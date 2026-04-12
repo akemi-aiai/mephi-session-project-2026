@@ -1,74 +1,26 @@
-    1  ip a
-    2  ip route
-    3  ping -c 4 8.8.8.8
-    4  ping -c 4 192.168.1.1
-    5  ping -c 4 8.8.8.8 > /tmp/network_check.txt
-    6  ping -c 4 192.168.1.1 >> /tmp/network_check.txt
-    7  cat /tmp/network_check.txt
-    8  sudo dnf install -y nginx tcpdump libcap-ng-utils
-    9  rpm -q nginx tcpdump libcap-ng-utils
-   10  cd /tmp
-   11  sudo dnf download --destdir=/tmp tcpdump
-   12  ls -lh /tmp/tcpdump*.rpm
-   13  sudo rpm -Uvh --replacepkgs /tmp/tcpdump*.rpm
-   14  rpm -q tcpdump
-   15  lsblk
-   16  sudo fdisk /dev/sdb
-   17  lsblk
-   18  sudo mkfs.ext4 -L MEPHI_DATA /dev/sdb1
-   19  sudo mkdir -p /data/mephi-web
-   20  sudo cp /etc/fstab /etc/fstab.bak
-   21  echo 'LABEL=MEPHI_DATA /data/mephi-web ext4 defaults 0 2' | sudo tee -a /etc/fstab
-   22  sudo mount -a
-   23  lsblk -f
-   24  df -h /data/mephi-web
-   25  sudo systemctl daemon-reload
-   26  sudo systemctl enable --now nginx
-   27  systemctl status nginx --no-pager
-   28  sudo journalctl -u nginx --since "5 minutes ago" > /tmp/nginx_recent_logs.txt
-   29  cat /tmp/nginx_recent_logs.txt
-   30  sudo nginx -t
-   31  sudo groupadd mephi-devs
-   32  sudo useradd -m -G mephi-devs mephi-admin
-   33  echo 'mephi-admin:P@ssw0rd2026' | sudo chpasswd
-   34  sudo chown -R mephi-admin:mephi-devs /data/mephi-web
-   35  sudo chmod 2775 /data/mephi-web
-   36  stat /data/mephi-web
-   37  id mephi-admin
-   38  getent group mephi-devs
-   39  getenforce
-   40  getenforce
-   41  sudo dnf install -y policycoreutils-python-utils
-   42  sudo semanage fcontext -a -t httpd_sys_content_t '/data/mephi-web(/.*)?'
-   43  sudo restorecon -Rv /data/mephi-web
-   44  ls -Zd /data/mephi-web
-   45  sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-   46  sudo sed -Ei 's#root[[:space:]]+/usr/share/nginx/html;#root /data/mephi-web;#' /etc/nginx/nginx.conf
-   47  grep -n 'root ' /etc/nginx/nginx.conf
-   48  sudo nginx -t
-   49  sudo systemctl reload nginx
-   50  sudo systemctl enable --now firewalld
-   51  sudo firewall-cmd --permanent --add-service=http
-   52  sudo firewall-cmd --reload
-   53  sudo firewall-cmd --list-services
-   54  ls -l /usr/sbin/tcpdump
-   55  sudo chmod u-s /usr/sbin/tcpdump 2>/dev/null || true
-   56  sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
-   57  getcap /usr/sbin/tcpdump
-   58  sudo -u mephi-admin /usr/sbin/tcpdump --help >/dev/null && echo OK
-   59  sudo cp /etc/pam.d/login /etc/pam.d/login.bak
-   60  sudo cp /etc/pam.d/sshd /etc/pam.d/sshd.bak
-   61  echo 'root' | sudo tee /etc/ssh/denied_users
-   62  sudo chmod 644 /etc/ssh/denied_users
-   63  sudo sed -i '2iauth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail' /etc/pam.d/login
-   64  sudo sed -i '2iauth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail' /etc/pam.d/sshd
-   65  grep -n pam_listfile /etc/pam.d/login /etc/pam.d/sshd
-   66  cat /etc/ssh/denied_users
-   67  sudo systemctl restart sshd
-   68  sudo -u mephi-admin bash -c 'echo "Hello I am a  Student  М255912" > /data/mephi-web/index.html'
-   69  sudo restorecon -Rv /data/mephi-web
-   70  ls -lZ /data/mephi-web
-   71  cat /data/mephi-web/index.html
-   72  curl http://localhost
-   73  curl http://192.168.1.100
-   74  history > ~/project_history.txt
+    1  whoami
+    2  echo 'Hello from Student M255912' > /data/mephi-web/index.html
+    3  restorecon -Rv /data/mephi-web
+    4  systemctl restart nginx
+    5  cat /data/mephi-web/index.html
+    6  curl -s http://localhost
+    7  curl -s http://192.168.1.100
+    8  systemctl restart nginx
+    9  curl -s http://localhost > /dev/null
+   10  journalctl -u nginx --since "5 minutes ago"
+   11  journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+   12  cat ~/nginx_recent_logs.txt
+   13  nmcli -t -f NAME,DEVICE con show --active
+   14  nmcli con modify enp0s3 ipv4.method manual \
+   15  nmcli con modify enp0s3   ipv4.method manual   ipv4.addresses "192.168.1.100/24"   ipv4.gateway "192.168.1.1"   ipv4.dns "8.8.8.8"   connection.autoconnect yes
+   16  hostnamectl set-hostname mephi-2026.domain.local
+   17  nmcli con show enp0s3 | egrep 'ipv4.method|ipv4.addresses|ipv4.gateway|ipv4.dns|connection.autoconnect'
+   18  hostnamectl
+   19  ip route
+   20  echo 'Hello from Student: M255912' > /data/mephi-web/index.html
+   21  restorecon -Rv /data/mephi-web
+   22  systemctl restart nginx
+   23  cat /data/mephi-web/index.html
+   24  curl -s http://localhost
+   25  curl -s http://192.168.1.100
+   26  history > ~/project_history.txt

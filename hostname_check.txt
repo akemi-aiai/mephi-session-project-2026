@@ -1,0 +1,21 @@
+     Static hostname: mephi-2026.domain.local
+           Icon name: computer-vm
+             Chassis: vm 🖴
+          Machine ID: b2969fbff8e14b7b94e97d01dfbafda2
+             Boot ID: 62a764b84598400999edf25616018d24
+        Product UUID: 485d3495-9eb0-ae4f-acfa-2913ba451430
+        AF_VSOCK CID: 1
+      Virtualization: oracle
+    Operating System: Fedora Linux 43 (Server Edition)
+         CPE OS Name: cpe:/o:fedoraproject:fedora:43
+      OS Support End: Wed 2026-12-02
+OS Support Remaining: 7month 2w 6d
+              Kernel: Linux 6.17.1-300.fc43.x86_64
+        Architecture: x86-64
+     Hardware Vendor: innotek GmbH
+      Hardware Model: VirtualBox
+     Hardware Serial: VirtualBox-95345d48-b09e-4fae-acfa-2913ba451430
+    Hardware Version: 1.2
+    Firmware Version: VirtualBox
+       Firmware Date: Fri 2006-12-01
+        Firmware Age: 19y 4month 1w 3d
