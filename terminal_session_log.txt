@@ -1,0 +1,266 @@
+KiB
+ nginx-core                          x86_64     2:1.28.3-1.fc43                       updates              1.8 MiB
+ nginx-filesystem                    noarch     2:1.28.3-1.fc43                       updates            141.0   B
+ nginx-mimetypes                     noarch     2.1.54-9.fc43                         fedora              46.6 KiB
+Installing weak dependencies:
+ julietaula-montserrat-fonts         noarch     1:9.000-3.fc43                        fedora               5.6 MiB
+
+Transaction Summary:
+ Installing:         9 packages
+ Upgrading:          4 packages
+ Replacing:          4 packages
+
+Total size of inbound packages is 4 MiB. Need to download 4 MiB.
+After this operation, 10 MiB extra will be used (install 11 MiB, remove 1 MiB).
+[ 1/13] nginx-2:1.28.3-1.fc43.x86_64                                      100% |  76.5 KiB/s |  36.5 KiB |  00m00s
+[ 2/13] nginx-filesystem-2:1.28.3-1.fc43.noarch                           100% |  27.4 KiB/s |  13.5 KiB |  00m00s
+[ 3/13] nginx-mimetypes-0:2.1.54-9.fc43.noarch                            100% |  48.2 KiB/s |  21.4 KiB |  00m00s
+[ 4/13] gperftools-libs-0:2.17.2-1.fc43.x86_64                            100% | 460.4 KiB/s | 293.3 KiB |  00m01s
+[ 5/13] libunwind-0:1.8.1-3.fc43.x86_64                                   100% | 303.6 KiB/s |  76.5 KiB |  00m00s
+[ 6/13] nginx-core-2:1.28.3-1.fc43.x86_64                                 100% | 550.0 KiB/s | 680.9 KiB |  00m01s
+[ 7/13] libcap-ng-utils-0:0.9.2-1.fc43.x86_64                             100% |   1.6 MiB/s | 346.9 KiB |  00m00s
+[ 8/13] fedora-logos-httpd-0:42.0.1-2.fc43.noarch                         100% | 103.6 KiB/s |  14.8 KiB |  00m00s
+[ 9/13] julietaula-montserrat-fonts-1:9.000-3.fc43.noarch                 100% |   4.1 MiB/s |   1.6 MiB |  00m00s
+[10/13] pcre2-0:10.47-1.fc43.x86_64                                       100% | 873.1 KiB/s | 267.2 KiB |  00m00s
+[11/13] pcre2-syntax-0:10.47-1.fc43.noarch                                100% | 533.0 KiB/s | 164.7 KiB |  00m00s
+[12/13] libcap-ng-0:0.9.2-1.fc43.x86_64                                   100% | 459.6 KiB/s |  32.6 KiB |  00m00s
+[13/13] libcap-ng-python3-0:0.9.2-1.fc43.x86_64                           100% | 477.5 KiB/s |  32.9 KiB |  00m00s
+------------------------------------------------------------------------------------------------------------------
+[13/13] Total                                                             100% |   2.1 MiB/s |   3.6 MiB |  00m02s
+Running transaction
+[ 1/19] Verify package files                                              100% | 171.0   B/s |  13.0   B |  00m00s
+[ 2/19] Prepare transaction                                               100% |  25.0   B/s |  17.0   B |  00m01s
+>>> Running sysusers scriptlet: nginx-filesystem-2:1.28.3-1.fc43.noarch                                           
+>>> Finished sysusers scriptlet: nginx-filesystem-2:1.28.3-1.fc43.noarch                                          
+>>> Scriptlet output:                                                                                             
+>>> Creating group 'nginx' with GID 987.                                                                          
+>>> Creating user 'nginx' (Nginx web server) with UID 987 and GID 987.                                            
+>>>                                                                                                               
+[ 3/19] Installing nginx-filesystem-2:1.28.3-1.fc43.noarch                100% |  18.2 KiB/s |   1.5 KiB |  00m00s
+[ 4/19] Upgrading libcap-ng-0:0.9.2-1.fc43.x86_64                         100% |   2.5 MiB/s |  66.9 KiB |  00m00s
+[ 5/19] Installing nginx-mimetypes-0:2.1.54-9.fc43.noarch                 100% |   1.7 MiB/s |  47.4 KiB |  00m00s
+[ 6/19] Upgrading pcre2-syntax-0:10.47-1.fc43.noarch                      100% |   5.3 MiB/s | 284.3 KiB |  00m00s
+[ 7/19] Upgrading pcre2-0:10.47-1.fc43.x86_64                             100% |  32.7 KiB/s | 704.1 KiB |  00m22s
+[ 8/19] Installing fedora-logos-httpd-0:42.0.1-2.fc43.noarch              100% | 362.6 KiB/s |  13.1 KiB |  00m00s
+[ 9/19] Installing libunwind-0:1.8.1-3.fc43.x86_64                        100% |   7.4 MiB/s | 197.4 KiB |  00m00s
+[10/19] Installing gperftools-libs-0:2.17.2-1.fc43.x86_64                 100% |   6.9 MiB/s |   1.2 MiB |  00m00s
+[11/19] Installing nginx-core-2:1.28.3-1.fc43.x86_64                      100% |  16.0 MiB/s |   1.8 MiB |  00m00s
+[12/19] Installing nginx-2:1.28.3-1.fc43.x86_64                           100% | 466.6 KiB/s | 126.4 KiB |  00m00s
+[13/19] Installing libcap-ng-utils-0:0.9.2-1.fc43.x86_64                  100% |  14.4 MiB/s |   1.0 MiB |  00m00s
+[14/19] Upgrading libcap-ng-python3-0:0.9.2-1.fc43.x86_64                 100% |   5.7 MiB/s |  88.2 KiB |  00m00s
+[15/19] Installing julietaula-montserrat-fonts-1:9.000-3.fc43.noarch      100% |  57.3 MiB/s |   5.6 MiB |  00m00s
+[16/19] Removing libcap-ng-python3-0:0.8.5-8.fc43.x86_64                  100% | 727.0   B/s |   8.0   B |  00m00s
+[17/19] Removing pcre2-0:10.46-1.fc43.x86_64                              100% | 264.0   B/s |   9.0   B |  00m00s
+[18/19] Removing pcre2-syntax-0:10.46-1.fc43.noarch                       100% | 695.0   B/s |  16.0   B |  00m00s
+[19/19] Removing libcap-ng-0:0.8.5-8.fc43.x86_64                          100% |   3.0   B/s |  12.0   B |  00m04s
+Complete!
+yara_fedora@mephi-2026:~$ rpm -q nginx tcpdump libcap-ng-utils
+nginx-1.28.3-1.fc43.x86_64
+tcpdump-4.99.5-6.fc43.x86_64
+libcap-ng-utils-0.9.2-1.fc43.x86_64
+yara_fedora@mephi-2026:~$ cd /tmp
+sudo dnf download --destdir=/tmp tcpdump
+Updating and loading repositories:
+Repositories loaded.
+Downloading Packages:
+ tcpdump-14:4.99.6-2.fc43.x86_64                                          100% | 364.2 KiB/s | 503.7 KiB |  00m01s
+yara_fedora@mephi-2026:/tmp$ ls -lh /tmp/tcpdump*.rpm
+-rw-r--r--. 1 root root 504K Apr 12 18:05 /tmp/tcpdump-4.99.6-2.fc43.x86_64.rpm
+yara_fedora@mephi-2026:/tmp$ sudo rpm -Uvh --replacepkgs /tmp/tcpdump*.rpm
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:tcpdump-14:4.99.6-2.fc43         ################################# [ 50%]
+Cleaning up / removing...
+   2:tcpdump-14:4.99.5-6.fc43         ################################# [100%]
+yara_fedora@mephi-2026:/tmp$ rpm -q tcpdump
+tcpdump-4.99.6-2.fc43.x86_64
+yara_fedora@mephi-2026:/tmp$ lsblk
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda               8:0    0 42.7G  0 disk 
+├─sda1            8:1    0    1M  0 part 
+├─sda2            8:2    0    2G  0 part /boot
+└─sda3            8:3    0 40.7G  0 part 
+  └─fedora-root 252:0    0   15G  0 lvm  /
+sdb               8:16   0 22.8G  0 disk 
+zram0           251:0    0  4.2G  0 disk [SWAP]
+yara_fedora@mephi-2026:/tmp$ sudo fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.41.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS (MBR) disklabel with disk identifier 0xeab10bd9.
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): 
+
+Using default response p.
+Partition number (1-4, default 1): 
+First sector (2048-47849471, default 2048): w
+Value out of range.
+First sector (2048-47849471, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-47849471, default 47849471): w
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-47849471, default 47849471): 
+
+Created a new partition 1 of type 'Linux' and of size 22.8 GiB.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+yara_fedora@mephi-2026:/tmp$ lsblk
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda               8:0    0 42.7G  0 disk 
+├─sda1            8:1    0    1M  0 part 
+├─sda2            8:2    0    2G  0 part /boot
+└─sda3            8:3    0 40.7G  0 part 
+  └─fedora-root 252:0    0   15G  0 lvm  /
+sdb               8:16   0 22.8G  0 disk 
+└─sdb1            8:17   0 22.8G  0 part 
+zram0           251:0    0  4.2G  0 disk [SWAP]
+yara_fedora@mephi-2026:/tmp$ sudo mkfs.ext4 -L MEPHI_DATA /dev/sdb1
+mke2fs 1.47.3 (8-Jul-2025)
+Creating filesystem with 5980928 4k blocks and 1496208 inodes
+Filesystem UUID: 8f302981-2cb7-489e-a9c8-8d1157736cd3
+Superblock backups stored on blocks: 
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+        4096000
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done   
+
+yara_fedora@mephi-2026:/tmp$ sudo mkdir -p /data/mephi-web
+yara_fedora@mephi-2026:/tmp$ sudo cp /etc/fstab /etc/fstab.bak
+yara_fedora@mephi-2026:/tmp$ echo 'LABEL=MEPHI_DATA /data/mephi-web ext4 defaults 0 2' | sudo tee -a /etc/fstab
+LABEL=MEPHI_DATA /data/mephi-web ext4 defaults 0 2
+yara_fedora@mephi-2026:/tmp$ sudo mount -a
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+yara_fedora@mephi-2026:/tmp$ lsblk -f
+NAME            FSTYPE      FSVER    LABEL      UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                                                   
+├─sda1                                                                                                
+├─sda2          xfs                             35e3b034-be1f-4954-a9d8-c016a43dd18e      1.5G    21% /boot
+└─sda3          LVM2_member LVM2 001            ga81X2-do9G-DbUJ-5hQc-vf2L-8O9T-AnMcMW                
+  └─fedora-root xfs                             c1b4e2f3-fa34-4e8f-b52f-3db8c3e55ead     12.2G    18% /
+sdb                                                                                                   
+└─sdb1          ext4        1.0      MEPHI_DATA 8f302981-2cb7-489e-a9c8-8d1157736cd3     21.1G     0% /data/mephi-web
+zram0           swap        1        zram0      72458a72-d582-4fb4-b5ff-8d9e7b7707ff                  [SWAP]
+yara_fedora@mephi-2026:/tmp$ df -h /data/mephi-web
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1        23G  2.1M   22G   1% /data/mephi-web
+yara_fedora@mephi-2026:/tmp$ sudo systemctl daemon-reload
+yara_fedora@mephi-2026:/tmp$ sudo systemctl enable --now nginx
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
+yara_fedora@mephi-2026:/tmp$ systemctl status nginx --no-pager
+● nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Sun 2026-04-12 18:15:45 CST; 5s ago
+ Invocation: 13d3bfc021cc4a8a8e109dd5c575530c
+    Process: 2351 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+    Process: 2353 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+    Process: 2355 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+   Main PID: 2356 (nginx)
+      Tasks: 3 (limit: 5149)
+     Memory: 3.6M (peak: 3.7M)
+        CPU: 289ms
+     CGroup: /system.slice/nginx.service
+             ├─2356 "nginx: master process /usr/sbin/nginx"
+             ├─2357 "nginx: worker process"
+             └─2358 "nginx: worker process"
+
+Apr 12 18:15:44 mephi-2026.domain.local systemd[1]: Starting nginx.service - The nginx HTTP and reverse pro…ver...
+Apr 12 18:15:45 mephi-2026.domain.local nginx[2353]: nginx: the configuration file /etc/nginx/nginx.conf sy… is ok
+Apr 12 18:15:45 mephi-2026.domain.local nginx[2353]: nginx: configuration file /etc/nginx/nginx.conf test i…essful
+Apr 12 18:15:45 mephi-2026.domain.local systemd[1]: Started nginx.service - The nginx HTTP and reverse prox…erver.
+Hint: Some lines were ellipsized, use -l to show in full.
+yara_fedora@mephi-2026:/tmp$ sudo journalctl -u nginx --since "5 minutes ago" > /tmp/nginx_recent_logs.txt
+yara_fedora@mephi-2026:/tmp$ cat /tmp/nginx_recent_logs.txt
+Apr 12 18:15:44 mephi-2026.domain.local systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Apr 12 18:15:45 mephi-2026.domain.local nginx[2353]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Apr 12 18:15:45 mephi-2026.domain.local nginx[2353]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Apr 12 18:15:45 mephi-2026.domain.local systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+yara_fedora@mephi-2026:/tmp$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+yara_fedora@mephi-2026:/tmp$ sudo groupadd mephi-devs
+yara_fedora@mephi-2026:/tmp$ sudo useradd -m -G mephi-devs mephi-admin
+yara_fedora@mephi-2026:/tmp$ echo 'mephi-admin:P@ssw0rd2026' | sudo chpasswd
+yara_fedora@mephi-2026:/tmp$ sudo chown -R mephi-admin:mephi-devs /data/mephi-web
+yara_fedora@mephi-2026:/tmp$ sudo chmod 2775 /data/mephi-web
+yara_fedora@mephi-2026:/tmp$ stat /data/mephi-web
+  File: /data/mephi-web
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 8,17    Inode: 2           Links: 3
+Access: (2775/drwxrwsr-x)  Uid: ( 1001/mephi-admin)   Gid: ( 1001/mephi-devs)
+Context: system_u:object_r:unlabeled_t:s0
+Access: 2026-04-12 18:16:43.537991954 +0800
+Modify: 2026-04-12 18:10:50.000000000 +0800
+Change: 2026-04-12 18:16:51.310168342 +0800
+ Birth: 2026-04-12 18:10:50.000000000 +0800
+yara_fedora@mephi-2026:/tmp$ id mephi-admin
+uid=1001(mephi-admin) gid=1002(mephi-admin) groups=1002(mephi-admin),1001(mephi-devs)
+yara_fedora@mephi-2026:/tmp$ getent group mephi-devs
+mephi-devs:x:1001:mephi-admin
+yara_fedora@mephi-2026:/tmp$ getenforce
+Enforcing
+yara_fedora@mephi-2026:/tmp$ getenforce
+Enforcing
+yara_fedora@mephi-2026:/tmp$ sudo dnf install -y policycoreutils-python-utils
+Updating and loading repositories:
+Repositories loaded.
+Package "policycoreutils-python-utils-3.9-5.fc43.noarch" is already installed.
+
+Nothing to do.
+yara_fedora@mephi-2026:/tmp$ sudo semanage fcontext -a -t httpd_sys_content_t '/data/mephi-web(/.*)?'
+yara_fedora@mephi-2026:/tmp$ sudo restorecon -Rv /data/mephi-web
+Relabeled /data/mephi-web from system_u:object_r:unlabeled_t:s0 to system_u:object_r:httpd_sys_content_t:s0
+Relabeled /data/mephi-web/lost+found from system_u:object_r:unlabeled_t:s0 to system_u:object_r:httpd_sys_content_t:s0
+yara_fedora@mephi-2026:/tmp$ ls -Zd /data/mephi-web
+system_u:object_r:httpd_sys_content_t:s0 /data/mephi-web
+yara_fedora@mephi-2026:/tmp$ sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+yara_fedora@mephi-2026:/tmp$ sudo sed -Ei 's#root[[:space:]]+/usr/share/nginx/html;#root /data/mephi-web;#' /etc/nginx/nginx.conf
+yara_fedora@mephi-2026:/tmp$ grep -n 'root ' /etc/nginx/nginx.conf
+36:        root /data/mephi-web;
+54:#        root /data/mephi-web;
+yara_fedora@mephi-2026:/tmp$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+yara_fedora@mephi-2026:/tmp$ sudo systemctl reload nginx
+yara_fedora@mephi-2026:/tmp$ sudo systemctl enable --now firewalld
+yara_fedora@mephi-2026:/tmp$ sudo firewall-cmd --permanent --add-service=http
+success
+yara_fedora@mephi-2026:/tmp$ sudo firewall-cmd --reload
+success
+yara_fedora@mephi-2026:/tmp$ sudo firewall-cmd --list-services
+cockpit dhcpv6-client http ssh
+yara_fedora@mephi-2026:/tmp$ ls -l /usr/sbin/tcpdump
+-rwxr-xr-x. 1 root root 1106440 Feb 13 08:00 /usr/sbin/tcpdump
+yara_fedora@mephi-2026:/tmp$ sudo chmod u-s /usr/sbin/tcpdump 2>/dev/null || true
+yara_fedora@mephi-2026:/tmp$ sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
+yara_fedora@mephi-2026:/tmp$ getcap /usr/sbin/tcpdump
+/usr/sbin/tcpdump cap_net_admin,cap_net_raw=ep
+yara_fedora@mephi-2026:/tmp$ sudo -u mephi-admin /usr/sbin/tcpdump --help >/dev/null && echo OK
+OK
+yara_fedora@mephi-2026:/tmp$ sudo cp /etc/pam.d/login /etc/pam.d/login.bak
+yara_fedora@mephi-2026:/tmp$ sudo cp /etc/pam.d/sshd /etc/pam.d/sshd.bak
+yara_fedora@mephi-2026:/tmp$ echo 'root' | sudo tee /etc/ssh/denied_users
+root
+yara_fedora@mephi-2026:/tmp$ sudo chmod 644 /etc/ssh/denied_users
+yara_fedora@mephi-2026:/tmp$ sudo sed -i '2iauth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail' /etc/pam.d/login
+yara_fedora@mephi-2026:/tmp$ sudo sed -i '2iauth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail' /etc/pam.d/sshd
+yara_fedora@mephi-2026:/tmp$ grep -n pam_listfile /etc/pam.d/login /etc/pam.d/sshd
+/etc/pam.d/login:2:auth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail
+/etc/pam.d/sshd:2:auth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=fail
+yara_fedora@mephi-2026:/tmp$ cat /etc/ssh/denied_users
+root
