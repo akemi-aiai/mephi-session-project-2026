@@ -1,26 +1,93 @@
-    1  whoami
-    2  echo 'Hello from Student M255912' > /data/mephi-web/index.html
-    3  restorecon -Rv /data/mephi-web
-    4  systemctl restart nginx
-    5  cat /data/mephi-web/index.html
-    6  curl -s http://localhost
-    7  curl -s http://192.168.1.100
-    8  systemctl restart nginx
-    9  curl -s http://localhost > /dev/null
-   10  journalctl -u nginx --since "5 minutes ago"
-   11  journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
-   12  cat ~/nginx_recent_logs.txt
-   13  nmcli -t -f NAME,DEVICE con show --active
-   14  nmcli con modify enp0s3 ipv4.method manual \
-   15  nmcli con modify enp0s3   ipv4.method manual   ipv4.addresses "192.168.1.100/24"   ipv4.gateway "192.168.1.1"   ipv4.dns "8.8.8.8"   connection.autoconnect yes
-   16  hostnamectl set-hostname mephi-2026.domain.local
-   17  nmcli con show enp0s3 | egrep 'ipv4.method|ipv4.addresses|ipv4.gateway|ipv4.dns|connection.autoconnect'
-   18  hostnamectl
-   19  ip route
-   20  echo 'Hello from Student: M255912' > /data/mephi-web/index.html
-   21  restorecon -Rv /data/mephi-web
-   22  systemctl restart nginx
-   23  cat /data/mephi-web/index.html
-   24  curl -s http://localhost
-   25  curl -s http://192.168.1.100
-   26  history > ~/project_history.txt
+===== ROOT HISTORY =====
+whoami
+echo 'Hello from Student M255912' > /data/mephi-web/index.html
+restorecon -Rv /data/mephi-web
+systemctl restart nginx
+cat /data/mephi-web/index.html
+curl -s http://localhost
+curl -s http://192.168.1.100
+systemctl restart nginx
+curl -s http://localhost > /dev/null
+journalctl -u nginx --since "5 minutes ago"
+journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+cat ~/nginx_recent_logs.txt
+nmcli -t -f NAME,DEVICE con show --active
+nmcli con modify enp0s3 ipv4.method manual \
+nmcli con modify enp0s3   ipv4.method manual   ipv4.addresses "192.168.1.100/24"   ipv4.gateway "192.168.1.1"   ipv4.dns "8.8.8.8"   connection.autoconnect yes
+hostnamectl set-hostname mephi-2026.domain.local
+nmcli con show enp0s3 | egrep 'ipv4.method|ipv4.addresses|ipv4.gateway|ipv4.dns|connection.autoconnect'
+hostnamectl
+ip route
+echo 'Hello from Student: M255912' > /data/mephi-web/index.html
+restorecon -Rv /data/mephi-web
+systemctl restart nginx
+cat /data/mephi-web/index.html
+curl -s http://localhost
+curl -s http://192.168.1.100
+history > ~/project_history.txt
+ping -c 4 192.168.1.1 > ~/network_check.txt
+ping -c 4 8.8.8.8 >> ~/network_check.txt
+journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+cp /etc/fstab ~/fstab.txt
+getenforce > ~/selinux_status.txt
+ls -Zd /data/mephi-web > ~/file_contexts.txt
+getcap /usr/sbin/tcpdump > ~/tcpdump_capabilities.txt
+stat /data/mephi-web > ~/permissions.txt
+id mephi-admin > ~/users_groups.txt
+getent group mephi-devs >> ~/users_groups.txt
+cp /data/mephi-web/index.html ~/index.html
+curl -s http://192.168.1.100 > ~/curl_output.txt
+hostnamectl > ~/hostname_check.txt
+ip route > ~/ip_route.txt
+ip -4 a > ~/ip_addr.txt
+cat /etc/resolv.conf > ~/dns_check.txt
+find ~ -maxdepth 2 -type d -name "mephi-session-project-2026"
+cd ~/mephi-session-project-2026
+ls /home
+find /home -maxdepth 3 -type d -name "mephi-session-project-2026"
+cd /home/yara_fedora/mephi-session-project-2026
+cp /root/project_history.txt .
+cp /root/network_check.txt .
+cp /root/nginx_recent_logs.txt .
+cp /root/fstab.txt .
+cp /root/selinux_status.txt .
+cp /root/file_contexts.txt .
+cp /root/tcpdump_capabilities.txt .
+cp /root/permissions.txt .
+cp /root/users_groups.txt .
+cp /root/index.html .
+cp /root/curl_output.txt .
+cp /root/hostname_check.txt .
+y
+cp /root/ip_route.txt .
+cp /root/ip_addr.txt .
+cp /root/dns_check.txt .
+ls
+cat index.html
+cat hostname_check.txt
+cat ip_route.txt
+git status
+git add .
+git commit -m "Fix project artifacts"
+git push
+git status
+git pull --rebase origin main
+git push origin main
+history -a
+ls -la /root/.bash_history
+ls -la /home/yara_fedora/.bash_history
+tail -n 50 /root/.bash_history
+tail -n 50 /home/yara_fedora/.bash_history
+history -a
+
+===== YARA_FEDORA HISTORY =====
+sudo -v
+hostnamectl
+nmcli con show --active
+ip a
+ip route
+sudo hostnamectl set-hostname mephi-2026.domain.local
+hostnamectl
+nmcli con show --active
+sudo nmcli con mod enp0s3 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes
+sudo nmcli con up enp0s3
