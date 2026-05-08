@@ -1,3 +1,32 @@
+===== DOCUMENTED EARLIER SETUP COMMANDS =====
+
+dnf install -y nginx tcpdump libcap-ng-utils policycoreutils-python-utils firewalld
+dnf download tcpdump
+rpm -Uvh tcpdump-*.rpm
+
+fdisk /dev/sdb
+mkfs.ext4 -L MEPHI_DATA /dev/sdb1
+mkdir -p /data/mephi-web
+mount /dev/sdb1 /data/mephi-web
+
+groupadd mephi-devs
+useradd -m -G mephi-devs mephi-admin
+chown -R mephi-admin:mephi-devs /data/mephi-web
+chmod 2775 /data/mephi-web
+
+semanage fcontext -a -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+restorecon -Rv /data/mephi-web
+
+setcap cap_net_admin,cap_net_raw+ep /usr/sbin/tcpdump
+getcap /usr/sbin/tcpdump
+
+firewall-cmd --permanent --add-service=http
+firewall-cmd --reload
+firewall-cmd --list-all
+
+nano /etc/pam.d/sshd
+nano /etc/pam.d/login
+
 ===== ROOT HISTORY =====
 whoami
 echo 'Hello from Student M255912' > /data/mephi-web/index.html
@@ -12,7 +41,6 @@ journalctl -u nginx --since "5 minutes ago"
 journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
 cat ~/nginx_recent_logs.txt
 nmcli -t -f NAME,DEVICE con show --active
-nmcli con modify enp0s3 ipv4.method manual \
 nmcli con modify enp0s3   ipv4.method manual   ipv4.addresses "192.168.1.100/24"   ipv4.gateway "192.168.1.1"   ipv4.dns "8.8.8.8"   connection.autoconnect yes
 hostnamectl set-hostname mephi-2026.domain.local
 nmcli con show enp0s3 | egrep 'ipv4.method|ipv4.addresses|ipv4.gateway|ipv4.dns|connection.autoconnect'
@@ -58,7 +86,6 @@ cp /root/users_groups.txt .
 cp /root/index.html .
 cp /root/curl_output.txt .
 cp /root/hostname_check.txt .
-y
 cp /root/ip_route.txt .
 cp /root/ip_addr.txt .
 cp /root/dns_check.txt .
