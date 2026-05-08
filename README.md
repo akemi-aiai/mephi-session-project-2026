@@ -1,22 +1,45 @@
-## Содержимое репозитория
+# Структура репозитория
 
-- `project_history.txt` — история выполненных команд
-- `network_check.txt` — результаты ping
-- `nginx_recent_logs.txt` — журналы nginx
-- `fstab.txt` — содержимое `/etc/fstab`
-- `selinux_status.txt` — статус SELinux
-- `file_contexts.txt` — контекст SELinux для `/data/mephi-web`
-- `tcpdump_capabilities.txt` — capabilities для `tcpdump`
-- `permissions.txt` — права доступа и владелец каталога
-- `users_groups.txt` — информация о пользователе и группе
-- `index.html` — web-страница
-- `curl_output.txt` — результат обращения к web-серверу
-- `mephi-nginx-screenshot.png` — скриншот с результатом
-- `tcpdump-4.99.6-2.fc43.x86_64.rpm` — скачанный RPM-пакет
+| Файл | Описание |
+|---|---|
+| `README.md` | Описание финального проекта |
+| `project_history.txt` | История команд проекта |
+| `terminal_session_log.txt` | Подробный лог выполнения ранних этапов настройки |
+| `network_check.txt` | Проверка сетевой связности |
+| `hostname_check.txt` | Проверка hostname |
+| `ip_route.txt` | Таблица маршрутизации |
+| `ip_addr.txt` | Проверка IP-адреса |
+| `dns_check.txt` | Проверка DNS-настроек |
+| `fstab.txt` | Конфигурация автоматического монтирования |
+| `selinux_status.txt` | Статус SELinux |
+| `file_contexts.txt` | SELinux-контекст каталога `/data/mephi-web` |
+| `permissions.txt` | Права, владелец и группа каталога `/data/mephi-web` |
+| `users_groups.txt` | Информация о пользователе `mephi-admin` и группе `mephi-devs` |
+| `tcpdump_capabilities.txt` | Capabilities для `tcpdump` |
+| `nginx_recent_logs.txt` | Последние логи сервиса `nginx` |
+| `index.html` | Финальная HTML-страница |
+| `curl_output.txt` | Результат проверки веб-сервера через `curl` |
+| `mephi-nginx-screenshot.png` | Скриншот итоговой страницы nginx |
+| `tcpdump-4.99.6-2.fc43.x86_64.rpm` | Локально скачанный RPM-пакет |
 
-### Дополнительные файлы
-- `hostname_check.txt` — подтверждение hostname
-- `ip_route.txt` — таблица маршрутизации
-- `ip_addr.txt` — IP-настройки интерфейса
-- `dns_check.txt` — текущая информация о DNS
-- `terminal_session_log.txt` — дополнительный лог терминальной сессии с ранними этапами настройки
+---
+
+# Итог
+
+В рамках финального проекта были выполнены основные задачи системного администрирования Linux:
+
+- настройка статической сети;
+- установка hostname;
+- проверка сетевой связности;
+- установка программного обеспечения;
+- скачивание и установка локального RPM-пакета;
+- разметка дополнительного диска;
+- создание файловой системы `ext4`;
+- настройка автоматического монтирования через `/etc/fstab`;
+- настройка и запуск веб-сервера `nginx`;
+- создание пользователя и группы;
+- настройка прав доступа и `setgid`;
+- настройка SELinux;
+- настройка Linux capabilities для `tcpdump`;
+- ограничение root login через PAM;
+- итоговая проверка веб-сервера через `curl`.
